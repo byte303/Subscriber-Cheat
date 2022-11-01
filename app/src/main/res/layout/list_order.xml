@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="listener"
+            type="frog.company.subscribercheat.helper.IClickOrder" />
+        <variable
+            name="data"
+            type="frog.company.subscribercheat.model.Orders" />
+    </data>
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="?myBackground"
+        android:onClick="@{() -> listener.onSelectOrder(data)}"
+        android:background="?android:selectableItemBackground">
+
+        <TextView
+            android:id="@+id/txtCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"Стоимость: " + data.orderPrice + " coin"}'
+            android:textColor="?myText"
+            android:textSize="12sp"
+            tools:text="Стоимость: 10 coin" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.orderName}"
+            android:textColor="?myTitle"
+            tools:text="Сделать три лайка на аватарку!" />
+
+
+
+
+    </LinearLayout>
+</layout>

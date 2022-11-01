@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SubscriberCheat" parent="MainTheme">
+        <item name="android:windowLightStatusBar">?myLightStatusBar</item>
+        <item name="android:statusBarColor">?myBackground</item>
+    </style>
+</resources>

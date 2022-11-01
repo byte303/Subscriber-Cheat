@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="vm"
+            type="frog.company.subscribercheat.ui.registration.RegistrationViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:background="?myBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:background="?myBackground"
+            tools:context=".ui.signin.auth.AuthorizationFragment">
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fonts_bold"
+                    android:padding="0dp"
+                    android:text="Кристалл"
+                    android:textColor="?myTitle"
+                    android:textSize="32sp"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="решения для бизнеса"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="Регистрация в системе"
+                android:textColor="?myTitle"
+                android:textSize="20sp"
+                android:fontFamily="@font/fonts_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/containerLogin"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconTint="?myTitle"
+                app:expandedHintEnabled="false"
+                app:hintEnabled="false"
+                app:endIconMode="clear_text">
+                <EditText
+                    android:id="@+id/edtLogin"
+                    android:maxLines="1"
+                    android:hint="@string/login"
+                    android:text="@={vm.login}"
+                    style="@style/TextInputEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/containerPass"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:endIconTint="?myTitle"
+                app:endIconMode="password_toggle">
+                <EditText
+                    android:id="@+id/edtPass"
+                    android:maxLines="1"
+                    android:hint="@string/password"
+                    android:text="@={vm.password}"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="10dp"
+                    style="@style/TextInputEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:endIconTint="?myTitle"
+                app:endIconMode="password_toggle">
+                <EditText
+                    android:maxLines="1"
+                    android:hint="@string/reload_password"
+                    android:text="@={vm.reloadPassword}"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="10dp"
+                    style="@style/TextInputEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:onClick="@{vm::onRegistration}"
+                android:layout_marginTop="20dp"
+                android:text="@string/registration"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistration"
+                android:onClick="@{vm::onOpenAuthorization}"
+                style="?attr/materialButtonOutlinedStyle"
+                android:textColor="?myTitle"
+                android:text="@string/yes_account_signin"
+                app:strokeColor="?myText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

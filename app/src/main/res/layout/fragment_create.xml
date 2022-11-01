@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="vm"
+            type="frog.company.subscribercheat.ui.create.CreateViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="?myBackground"
+        android:orientation="vertical"
+        tools:context=".ui.create.CreateFragment">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/StyleTextViewToolbar"
+            android:text="@string/add_work"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/toggleButton"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/shape_spinner"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:onCheckedChanged="@{vm.onSplitTypeChanged}"
+            android:checkedButton="@id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/button1"
+                style="@style/StyleRadioRegistration"
+                android:text="INST"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/button2"
+                style="@style/StyleRadioRegistration"
+
+                android:text="VK"            />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/button3"
+                style="@style/StyleRadioRegistration"
+                android:text="TikTok" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputLayout"
+            app:hintEnabled="false"
+            app:endIconTint="?myTitle"
+            app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                android:hint="@string/name_work"
+                android:text="@={vm.name}"
+                style="@style/TextInputEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputLayout"
+            app:hintEnabled="false"
+            app:helperText='@{"Ваш баланс: " + vm.coins + " coin"}'
+            app:helperTextTextColor="?myText"
+            app:endIconTint="?myTitle"
+            app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="number"
+                android:hint="@string/price"
+                android:text="@={vm.price}"
+                style="@style/TextInputEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputLayout"
+            app:hintEnabled="false"
+            app:endIconTint="?myTitle"
+            app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="number"
+                android:hint="@string/count"
+                android:text="@={vm.count}"
+                style="@style/TextInputEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputLayout"
+            app:hintEnabled="false"
+            app:endIconTint="?myTitle"
+            app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                android:hint="@string/url"
+                android:text="@={vm.url}"
+                style="@style/TextInputEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:onClick="@{vm::onNext}"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/create"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

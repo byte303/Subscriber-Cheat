@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="myBackground" format="color|reference"/>
+    <attr name="myWhite" format="color|reference"/>
+    <attr name="myBorders" format="color|reference"/>
+    <attr name="myTitle" format="color|reference"/>
+    <attr name="myText" format="color|reference"/>
+    <attr name="myOsn" format="color|reference"/>
+    <attr name="myLightStatusBar" format="boolean"/>
+    <attr name="mySelectable" format="color|reference"/>
+
+    <style name="MainTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/osn</item>
+        <item name="colorPrimaryVariant">@color/osn</item>
+        <item name="colorOnPrimary">@color/osn</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/osn</item>
+        <item name="colorSecondaryVariant">@color/osn</item>
+        <item name="colorOnSecondary">@color/osn</item>
+        <item name="android:fontFamily">@font/fonts</item>
+        <item name="android:textColor">?myTitle</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="textInputStyle">@style/TextInputLayout</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="buttonTint">@color/selector_checkbox</item>
+        <item name="editTextStyle">@style/EditTextStyle</item>
+    </style>
+
+    <style name="ThemeLight" parent="Theme.SubscriberCheat">
+        <item name="myBackground">@color/background</item>
+        <item name="mySelectable">?android:colorControlHighlight</item>
+        <item name="myWhite">@color/gray</item>
+        <item name="myBorders">@color/white</item>
+        <item name="myTitle">@color/black</item>
+        <item name="myText">#A5A5A5</item>
+        <item name="myOsn">@color/osn</item>
+        <item name="myLightStatusBar">true</item>
+        <item name="colorSurface">?myBackground</item>
+        <item name="android:popupBackground">?myBackground</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ThemeDark" parent="Theme.SubscriberCheat">
+        <item name="myBackground">#252525</item>
+        <item name="mySelectable">#2C2C2C</item>
+        <item name="myWhite">#242424</item>
+        <item name="myBorders">#393939</item>
+        <item name="myTitle">@color/white</item>
+        <item name="myText">#B7C0CB</item>
+        <item name="myOsn">@color/osn</item>
+        <item name="myLightStatusBar">false</item>
+        <item name="colorSurface">?myBackground</item>
+        <item name="android:popupBackground">?myBackground</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">?myTitle</item>
+        <item name="android:textColorHint">?myText</item>
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/shape_spinner</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:textColor">?myTitle</item>
+        <item name="android:background">@drawable/shape_spinner</item>
+
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:textColor">?myTitle</item>
+        <item name="android:textColorHint">?myText</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/shape_spinner</item>
+    </style>
+
+    <style name="ComboBox">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/shape_spinner</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:popupBackground">?myBackground</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeColor">@color/selector_edtbox</item>
+        <item name="hintTextColor">?myText</item>
+        <item name="colorOnSurface">?myText</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="colorAccent">?myText</item>
+        <item name="android:textColorPrimary">?myText</item>
+        <item name="android:textColor">?myText</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/dialog_radius</item>
+        <item name="colorPrimary">?myText</item>
+        <item name="colorPrimaryVariant">?myText</item>
+        <item name="android:fontFamily">@font/fonts_medium</item>
+        <item name="textColorAlertDialogListItem">@color/text</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="shapeAppearanceOverlay">@style/shapeAppearanceOverlay</item>
+    </style>
+
+    <style name="shapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+    </style>
+
+    <style name="StyleRadioRegistration">
+        <item name="android:textColor">@color/selector_radio_reg_text</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@drawable/selector_radio_reg</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@android:color/transparent</item>
+    </style>
+
+    <style name="StyleArrowForward">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="StyleMaterialDivider">
+        <item name="background">?myText</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    <style name="StyleTitleTextProfile">
+        <item name="android:textColor">?myText</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="StyleButtonMenuIndividual" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:textColor">?myTitle</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="StyleTextCardIcon">
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="StyleTextViewToolbar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:fontFamily">@font/fonts_bold</item>
+        <item name="android:textColor">?myTitle</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="StyleImageViewToolbar">
+        <item name="android:padding">5dp</item>
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

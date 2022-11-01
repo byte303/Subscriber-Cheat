@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Subscriber Cheat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registration">Регистрация</string>
+    <string name="signin">Войти в аккаунт</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="authorization_system">Авторизация в системе</string>
+    <string name="error_login_or_password">Логин и/или пароль введён неверно!</string>
+    <string name="reload_password">Повторите пароль</string>
+    <string name="yes_account_signin">Есть аккаунт? Войти</string>
+    <string name="password_not_reload_password">Пароли не совпадают!</string>
+    <string name="login_yes">Данный логин уже используется!</string>
+    <string name="error_reload_please">Произошла ошибка, попробуйте ещё раз</string>
+    <string name="text_empty">На данный момент нет заказов в данной категории</string>
+    <string name="add_work">Добавление задания</string>
+    <string name="name_work">Наименование задания</string>
+    <string name="create">Создать</string>
+    <string name="count">Количество</string>
+    <string name="price">Стоимость</string>
+    <string name="not_coins">У Вас недостаточно coins</string>
+    <string name="work_good_done">Задание успешно создано!</string>
+    <string name="url">Ссылка</string>
+    <string name="not_full_all_line">Вы заполнили не все поля!</string>
+</resources>
